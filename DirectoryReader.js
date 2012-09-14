@@ -1,6 +1,8 @@
 var fs = require ('fs'),
 	path = require('path'),
+	search = require('./Searcher.js'),
 	fileStructure = require('./FileStructure.js'),
+	tvSearcher = new search.Searcher(),
 	DirectoryReader = function(dir) {
 		var self = this;
 		this.baseDir = dir,
@@ -50,7 +52,13 @@ var fs = require ('fs'),
 		this.processDirectories = function(onComplete) {
 			onComplete = onComplete || function() { };
 
-			
+			tvSearcher.searchForTvShow('Stargate Atlantis', function(err, show) {
+				if (err) {
+					console.log(err);
+				}
+
+				console.log(show);
+			});
 		}
 
 };

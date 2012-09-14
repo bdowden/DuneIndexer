@@ -14,3 +14,5 @@ var directoryReader = require('./DirectoryReader.js'),
 	duneServer = require('./HttpServer.js'),
 	server = new duneServer.DuneServer	(1337, onRequestReceived);
 	server.createAndStartServer();
+
+	tvDirReader.processDirectories(null);

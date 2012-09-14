@@ -1,0 +1,6 @@
+[submodule ".lib/xml2js"]
+	path = .lib/xml2js
+	url = git://github.com/Leonidas-from-XIV/node-xml2js.git
+[submodule "lib/xml2js"]
+	path = lib/xml2js
+	url = git://github.com/Leonidas-from-XIV/node-xml2js.git
